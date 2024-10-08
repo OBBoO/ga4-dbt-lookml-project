@@ -1,0 +1,12 @@
+version: "1"
+context:
+  active-host: "cloud.getdbt.com"
+  active-project: "382177"
+projects:
+  - project-name: "ga4_dbt_lkml_project"
+    project-id: "382177"
+    account-name: "Converteo (Partner)"
+    account-id: "218515"
+    account-host: "cloud.getdbt.com"
+    token-name: "cloud-cli-b8af"
+    token-value: "dbtu_fMCjSnk5Sp8bUlOQ_Qh0ztTGXSPtI4Uh5cBD3NsiNovc4Kci5c"
