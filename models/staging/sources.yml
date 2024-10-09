@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: ga4_raw
+    schema: ga4_obfuscated_sample_ecommerce  # Replace with your raw GA4 dataset
+    database: bigquery-public-data
+    tables:
+      - name: events_*
+        description: "Raw GA4 events data partitioned by date."
