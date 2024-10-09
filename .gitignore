@@ -1,4 +1,5 @@
 # Ignore sensitive files
+logs/
 profiles.yml
 .env
 *.json  # In case you have any service account keyfiles
