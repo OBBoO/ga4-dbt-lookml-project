@@ -1,4 +1,4 @@
-name: 'ga4_dbt_lkml_project'
+name: {{ env_var('DBT_PROJECT_NAME') }}
 version: '1.0.0'
 config-version: 2
 
