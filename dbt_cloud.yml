@@ -1,12 +1,12 @@
 version: "1"
 context:
   active-host: "cloud.getdbt.com"
-  active-project: "382177"
+  active-project:  {{ env_var('DBT_ACTIVE_PROJECT') }} 
 projects:
-  - project-name: "ga4_dbt_lkml_project"
-    project-id: "382177"
-    account-name: "Converteo (Partner)"
-    account-id: "218515"
+  - project-name:  {{ env_var('DBT_PROJECT_NAME') }}
+    project-id:  {{ env_var('DBT_PROJECT_ID') }}
+    account-name:  {{ env_var('DBT_ACCOUNT_NAME') }}
+    account-id:   {{ env_var('DBT_ACCOUNT_ID') }}
     account-host: "cloud.getdbt.com"
-    token-name: "cloud-cli-b8af"
-    token-value: "dbtu_fMCjSnk5Sp8bUlOQ_Qh0ztTGXSPtI4Uh5cBD3NsiNovc4Kci5c"
+    token-name:   {{ env_var('DBT_TOKEN_NAME') }}
+    token-value:   {{ env_var('DBT_TOKEN_VALUE') }}

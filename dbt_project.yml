@@ -1,0 +1,40 @@
+name: 'ga4_dbt_lkml_project'
+version: '1.0.0'
+config-version: 2
+
+profile: 'ga4_profile'
+
+# Specify folders
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+docs-paths: ["models/docs"]
+
+packages-install-path: 'dbt_packages'  # Where dbt will install packages
+
+quoting:
+  database: false    # Do not quote the database name
+  schema: false      # Do not quote the schema name
+  identifier: false  # Do not quote the table name (this fixes the issue with wildcards)
+
+# Project-level configurations
+models:
+  ga4_dbt_project:
+    +materialized: view
+    staging:
+      +schema: 'stg_ga4'
+      +materialized: view
+    core:
+      +schema: 'core_ga4'
+      +materialized: view
+    marts:
+      +schema: 'marts_ga4'
+      +materialized: table
+      +persist_docs:
+        relation: true
+        columns: true
+      +meta:
+        generate_lookml: true  # Flag for dbt2looker

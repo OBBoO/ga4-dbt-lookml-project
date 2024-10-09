@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: mart_ga4_user_behavior
+    description: "Data mart for user behavior analytics."
+    columns:
+      - name: user_pseudo_id
+        description: "Anonymized user ID."
+        tests:
+          - not_null
+          - unique
+      - name: total_sessions
+        description: "Total number of sessions per user."
+      - name: total_page_views
+        description: "Total page views per user."
+      - name: total_engagement_time_sec
+        description: "Total engagement time in seconds per user."
+      - name: avg_engagement_time_sec
+        description: "Average engagement time in seconds per session."
+      - name: country
+        description: "Country of the user."
+      - name: region
+        description: "Region of the user."
+      - name: city
+        description: "City of the user."
+      - name: device_category
+        description: "Device category used by the user."
+      - name: operating_system
+        description: "Operating system of the device."
+      - name: browser
+        description: "Browser used by the user."
+    meta:
+      generate_lookml: true  # Flag for dbt2looker
