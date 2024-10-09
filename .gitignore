@@ -1,4 +1,3 @@
-# Ignore sensitive files
 logs/
 profiles.yml
 .env
