@@ -4,3 +4,4 @@ profiles.yml
 *.json  # In case you have any service account keyfiles
 target/
 dbt2looker-venv/
+set_dbt_ebv.sh
