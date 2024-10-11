@@ -1,0 +1,152 @@
+version: 2
+
+models:
+  - name: ga4_events
+    description: "This model cleans and flattens raw GA4 events data."
+    config:
+      materialized: table
+    columns:
+      - name: session_id
+        description: "Session ID extracted from event parameters."
+      - name: event_date
+        description: "Date of the event."
+      - name: event_timestamp
+        description: "Timestamp of the event."
+      - name: event_name
+        description: "Name of the event."
+      - name: event_previous_timestamp
+        description: "Timestamp of the previous event."
+      - name: event_value_in_usd
+        description: "Event value in USD."
+      - name: event_bundle_sequence_id
+        description: "Bundle sequence ID of the event."
+      - name: event_server_timestamp_offset
+        description: "Server timestamp offset for the event."
+      - name: user_id
+        description: "User ID associated with the event."
+      - name: user_pseudo_id
+        description: "Pseudo user ID associated with the event."
+      - name: user_first_touch_timestamp
+        description: "Timestamp of the user's first touchpoint."
+      - name: privacy_info_analytics_storage
+        description: "Information on the user's consent for analytics storage."
+      - name: privacy_info_ads_storage
+        description: "Information on the user's consent for ads storage."
+      - name: privacy_info_uses_transient_token
+        description: "Whether the user uses a transient token."
+      - name: user_ltv_revenue
+        description: "Lifetime value revenue for the user."
+      - name: user_ltv_currency
+        description: "Currency used for the lifetime value revenue."
+      - name: device_category
+        description: "Category of the device used for the event."
+      - name: device_mobile_brand_name
+        description: "Brand name of the mobile device."
+      - name: device_mobile_model_name
+        description: "Model name of the mobile device."
+      - name: device_mobile_marketing_name
+        description: "Marketing name of the mobile device."
+      - name: device_mobile_os_hardware_model
+        description: "OS hardware model of the mobile device."
+      - name: device_operating_system
+        description: "Operating system used on the device."
+      - name: device_operating_system_version
+        description: "Version of the operating system used on the device."
+      - name: device_vendor_id
+        description: "Vendor ID of the device."
+      - name: device_advertising_id
+        description: "Advertising ID of the device."
+      - name: device_language
+        description: "Language set on the device."
+      - name: device_is_limited_ad_tracking
+        description: "Whether ad tracking is limited on the device."
+      - name: device_time_zone_offset_seconds
+        description: "Time zone offset in seconds for the device."
+      - name: device_browser
+        description: "Browser used on the device."
+      - name: device_browser_version
+        description: "Version of the browser used on the device."
+      - name: device_web_info_browser
+        description: "Browser information for the web device."
+      - name: device_web_info_browser_version
+        description: "Version of the web browser."
+      - name: device_web_info_hostname
+        description: "Hostname from the web device."
+      - name: geo_continent
+        description: "Continent where the event took place."
+      - name: geo_country
+        description: "Country where the event took place."
+      - name: geo_region
+        description: "Region where the event took place."
+      - name: geo_city
+        description: "City where the event took place."
+      - name: geo_sub_continent
+        description: "Sub-continent where the event took place."
+      - name: geo_metro
+        description: "Metro area where the event took place."
+      - name: app_info_id
+        description: "App ID associated with the event."
+      - name: app_info_version
+        description: "Version of the app associated with the event."
+      - name: app_info_install_store
+        description: "Install store used for the app."
+      - name: app_info_firebase_app_id
+        description: "Firebase App ID for the event."
+      - name: app_info_install_source
+        description: "Source of the app install."
+      - name: traffic_source_name
+        description: "Traffic source name for the event."
+      - name: traffic_source_medium
+        description: "Traffic source medium for the event."
+      - name: traffic_source_source
+        description: "Traffic source for the event."
+      - name: stream_id
+        description: "ID of the stream associated with the event."
+      - name: platform
+        description: "Platform where the event occurred."
+      - name: event_dimensions_hostname
+        description: "Hostname of the event dimensions."
+      - name: ecommerce_total_item_quantity
+        description: "Total item quantity in the ecommerce transaction."
+      - name: ecommerce_purchase_revenue_in_usd
+        description: "Purchase revenue in USD for ecommerce transactions."
+      - name: ecommerce_purchase_revenue
+        description: "Purchase revenue for ecommerce transactions."
+      - name: ecommerce_refund_value_in_usd
+        description: "Refund value in USD for ecommerce transactions."
+      - name: ecommerce_refund_value
+        description: "Refund value for ecommerce transactions."
+      - name: ecommerce_shipping_value_in_usd
+        description: "Shipping value in USD for ecommerce transactions."
+      - name: ecommerce_shipping_value
+        description: "Shipping value for ecommerce transactions."
+      - name: ecommerce_tax_value_in_usd
+        description: "Tax value in USD for ecommerce transactions."
+      - name: ecommerce_tax_value
+        description: "Tax value for ecommerce transactions."
+      - name: ecommerce_unique_items
+        description: "Number of unique items in the ecommerce transaction."
+      - name: ecommerce_transaction_id
+        description: "Transaction ID for the ecommerce transaction."
+      - name: collected_traffic_source_manual_campaign_id
+        description: "Manually collected campaign ID for the traffic source."
+      - name: collected_traffic_source_manual_campaign_name
+        description: "Manually collected campaign name for the traffic source."
+      - name: collected_traffic_source_manual_source
+        description: "Manually collected source for the traffic source."
+      - name: collected_traffic_source_manual_medium
+        description: "Manually collected medium for the traffic source."
+      - name: collected_traffic_source_manual_term
+        description: "Manually collected term for the traffic source."
+      - name: collected_traffic_source_manual_content
+        description: "Manually collected content for the traffic source."
+      - name: collected_traffic_source_gclid
+        description: "Google Click Identifier (GCLID) for the event."
+      - name: collected_traffic_source_dclid
+        description: "DoubleClick Identifier (DCLID) for the event."
+      - name: collected_traffic_source_srsltid
+        description: "Search Result Source Identifier (SRSID) for the event."
+      - name: is_active_user
+        description: "Flag indicating if the user is active."
+      - name: join_key
+        description: "Join key created by concatenating user_pseudo_id, event_timestamp, event_name, and a row number."
