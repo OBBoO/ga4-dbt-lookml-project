@@ -24,15 +24,18 @@ quoting:
 # Project-level configurations
 models:
   ga4_dbt_project:
-    +materialized: view
-    staging:
-      +schema: 'stg_ga4'
-      +materialized: view
-    core:
-      +schema: 'core_ga4'
-      +materialized: view
-    marts:
-      +schema: 'marts_ga4'
+    +materialized: table
+    EVENT_PARAMS:
+      +schema: 'event_params'
+      +materialized: table
+    EVENTS:
+      +schema: 'events'
+      +materialized: table
+    ITEMS:
+      +schema: 'items'
+      +materialized: table
+    USER_PROPERTIES:
+      +schema: 'user_properties'
       +materialized: table
       +persist_docs:
         relation: true

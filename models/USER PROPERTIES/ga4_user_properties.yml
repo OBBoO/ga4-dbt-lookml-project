@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: ga4_user_properties  # Change the model name as needed
+    description: "This model prepares and flattens GA4 user properties data, creating a join key and deduplicating user property events."
+    config:
+      materialized: table
+    columns:
+      - name: dedup_id
+        description: "Unique identifier for each event to remove duplicates."
+        data_type: integer
+
+      - name: user_pseudo_id
+        description: "Pseudo user ID associated with the event."
+        data_type: string
+
+      - name: event_timestamp
+        description: "Timestamp of the event."
+        data_type: timestamp
+
+      - name: event_name
+        description: "Name of the event."
+        data_type: string
+
+      - name: user_properties_key
+        description: "Key associated with the user property."
+        data_type: string
+
+      - name: user_properties_value_string_value
+        description: "String value associated with the user property."
+        data_type: string
+
+      - name: user_properties_value_int_value
+        description: "Integer value associated with the user property."
+        data_type: integer
+
+      - name: user_properties_value_float_value
+        description: "Float value associated with the user property."
+        data_type: float
+
+      - name: user_properties_value_double_value
+        description: "Double value associated with the user property."
+        data_type: float
+
+      - name: user_properties_value_set_timestamp_micros
+        description: "Timestamp (in microseconds) for when the user property was set."
+        data_type: integer
+
+      - name: join_key
+        description: "Join key created by concatenating user_pseudo_id, event_timestamp, event_name, and dedup_id."
+        data_type: string
