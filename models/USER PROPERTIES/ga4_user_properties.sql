@@ -6,8 +6,7 @@ select
     *
 from
     `{{ source('ga4_raw', 'events_*') }}`
-where
-  _table_suffix = format_date('%Y%m%d',date_sub(current_date(), interval 3 day)))
+)
 
 select 
     user_pseudo_id,
