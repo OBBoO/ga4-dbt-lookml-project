@@ -7,10 +7,10 @@ models:
       materialized: table
 
     columns:
-
+    
       - name: ga_session_id
         description: "Google Analytics session ID extracted from event parameters."
-        data_type: string
+        data_type: integer
 
       - name: join_key
         description: "Join key created by concatenating user_pseudo_id, event_timestamp, event_name, and dedup_id."
@@ -38,7 +38,7 @@ models:
 
       - name: int_value
         description: "Integer value associated with the event parameter."
-        data_type: int
+        data_type: integer
 
       - name: float_value
         description: "Float value associated with the event parameter."
@@ -50,4 +50,4 @@ models:
 
       - name: dedup_id
         description: "Unique identifier for each event to remove duplicates."
-        data_type: int
+        data_type: integer

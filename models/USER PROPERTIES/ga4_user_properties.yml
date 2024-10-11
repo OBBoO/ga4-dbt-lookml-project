@@ -8,7 +8,7 @@ models:
     columns:
       - name: dedup_id
         description: "Unique identifier for each event to remove duplicates."
-        data_type: int
+        data_type: integer
 
       - name: user_pseudo_id
         description: "Pseudo user ID associated with the event."
@@ -32,7 +32,7 @@ models:
 
       - name: user_properties_value_int_value
         description: "Integer value associated with the user property."
-        data_type: int
+        data_type: integer
 
       - name: user_properties_value_float_value
         description: "Float value associated with the user property."
@@ -44,7 +44,7 @@ models:
 
       - name: user_properties_value_set_timestamp_micros
         description: "Timestamp (in microseconds) for when the user property was set."
-        data_type: bigint
+        data_type: integer
 
       - name: join_key
         description: "Join key created by concatenating user_pseudo_id, event_timestamp, event_name, and dedup_id."

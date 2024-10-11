@@ -32,11 +32,11 @@ models:
 
       - name: event_bundle_sequence_id
         description: "Bundle sequence ID of the event."
-        data_type: int
+        data_type: integer
 
       - name: event_server_timestamp_offset
         description: "Server timestamp offset for the event."
-        data_type: int
+        data_type: integer
 
       - name: user_id
         description: "User ID associated with the event."
@@ -116,7 +116,7 @@ models:
 
       - name: device_time_zone_offset_seconds
         description: "Time zone offset in seconds for the device."
-        data_type: int
+        data_type: integer
 
       - name: device_web_info_browser
         description: "Browser information for the web device."
@@ -196,7 +196,7 @@ models:
 
       - name: ecommerce_total_item_quantity
         description: "Total item quantity in the ecommerce transaction."
-        data_type: int
+        data_type: integer
 
       - name: ecommerce_purchase_revenue_in_usd
         description: "Purchase revenue in USD for ecommerce transactions."
@@ -232,7 +232,7 @@ models:
 
       - name: ecommerce_unique_items
         description: "Number of unique items in the ecommerce transaction."
-        data_type: int
+        data_type: integer
 
       - name: ecommerce_transaction_id
         description: "Transaction ID for the ecommerce transaction."
