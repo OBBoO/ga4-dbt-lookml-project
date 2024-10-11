@@ -62,16 +62,16 @@ models:
         description: "Whether ad tracking is limited on the device."
       - name: device_time_zone_offset_seconds
         description: "Time zone offset in seconds for the device."
-      - name: device_browser
-        description: "Browser used on the device."
-      - name: device_browser_version
-        description: "Version of the browser used on the device."
+      # - name: device_browser
+      #   description: "Browser used on the device."
+      # - name: device_browser_version
+      #   description: "Version of the browser used on the device."
       - name: device_web_info_browser
         description: "Browser information for the web device."
       - name: device_web_info_browser_version
         description: "Version of the web browser."
-      - name: device_web_info_hostname
-        description: "Hostname from the web device."
+      # - name: device_web_info_hostname
+      #   description: "Hostname from the web device."
       - name: geo_continent
         description: "Continent where the event took place."
       - name: geo_country
@@ -128,25 +128,25 @@ models:
         description: "Number of unique items in the ecommerce transaction."
       - name: ecommerce_transaction_id
         description: "Transaction ID for the ecommerce transaction."
-      - name: collected_traffic_source_manual_campaign_id
-        description: "Manually collected campaign ID for the traffic source."
-      - name: collected_traffic_source_manual_campaign_name
-        description: "Manually collected campaign name for the traffic source."
-      - name: collected_traffic_source_manual_source
-        description: "Manually collected source for the traffic source."
-      - name: collected_traffic_source_manual_medium
-        description: "Manually collected medium for the traffic source."
-      - name: collected_traffic_source_manual_term
-        description: "Manually collected term for the traffic source."
-      - name: collected_traffic_source_manual_content
-        description: "Manually collected content for the traffic source."
-      - name: collected_traffic_source_gclid
-        description: "Google Click Identifier (GCLID) for the event."
-      - name: collected_traffic_source_dclid
-        description: "DoubleClick Identifier (DCLID) for the event."
-      - name: collected_traffic_source_srsltid
-        description: "Search Result Source Identifier (SRSID) for the event."
-      - name: is_active_user
-        description: "Flag indicating if the user is active."
+      # - name: collected_traffic_source_manual_campaign_id
+      #   description: "Manually collected campaign ID for the traffic source."
+      # - name: collected_traffic_source_manual_campaign_name
+      #   description: "Manually collected campaign name for the traffic source."
+      # - name: collected_traffic_source_manual_source
+      #   description: "Manually collected source for the traffic source."
+      # - name: collected_traffic_source_manual_medium
+      #   description: "Manually collected medium for the traffic source."
+      # - name: collected_traffic_source_manual_term
+      #   description: "Manually collected term for the traffic source."
+      # - name: collected_traffic_source_manual_content
+      #   description: "Manually collected content for the traffic source."
+      # - name: collected_traffic_source_gclid
+      #   description: "Google Click Identifier (GCLID) for the event."
+      # - name: collected_traffic_source_dclid
+      #   description: "DoubleClick Identifier (DCLID) for the event."
+      # - name: collected_traffic_source_srsltid
+      #   description: "Search Result Source Identifier (SRSID) for the event."
+      # - name: is_active_user
+      #   description: "Flag indicating if the user is active."
       - name: join_key
         description: "Join key created by concatenating user_pseudo_id, event_timestamp, event_name, and a row number."

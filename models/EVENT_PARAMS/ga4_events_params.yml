@@ -16,15 +16,15 @@ models:
         description: "Timestamp of the event."
       - name: event_name
         description: "Name of the event."
-      - name: event_params_key
+      - name: key
         description: "Key associated with the event parameter."
-      - name: event_params_value_string_value
+      - name: string_value
         description: "String value associated with the event parameter."
-      - name: event_params_value_int_value
+      - name: int_value
         description: "Integer value associated with the event parameter."
-      - name: event_params_value_float_value
+      - name: float_value
         description: "Float value associated with the event parameter."
-      - name: event_params_value_double_value
+      - name: double_value
         description: "Double value associated with the event parameter."
       - name: join_key
         description: "Join key created by concatenating user_pseudo_id, event_timestamp, event_name, and dedup_id."
